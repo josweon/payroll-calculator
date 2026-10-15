@@ -16,5 +16,7 @@ public class payCheck {
         System.out.print("Pay rate: ");
         float payRate = scanner.nextFloat();
 
+        double gross = hours * payRate;
+        System.out.printf("Hey %s, your gross pay is $%.2f.", name, gross);
     }
 }
