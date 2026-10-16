@@ -9,19 +9,19 @@ public class PayCheck {
         Scanner scanner = new Scanner(System.in);
 
         // Queries and stores employees new name
-        System.out.print("Enter you name: ");
+        System.out.print("Enter you name: "); // String queryName
         String name = scanner.nextLine();
 
         // Queries and stores number of hours worked
-        System.out.print("Number of hours worked: ");
+        System.out.print("Number of hours worked: "); // double queryHours
         float hours = scanner.nextFloat();
 
         // Queries and stores pay rate
-        System.out.print("Pay rate: ");
+        System.out.print("Pay rate: "); //double getPayRate
         float payRate = scanner.nextFloat();
 
         // Calculates the gross pay for employee
-        double grossPay = hours * payRate;
+        double grossPay = hours * payRate; //void grossPay
 
         if (hours > 40) {
             // Calculates gross pay after extra pay
@@ -35,5 +35,11 @@ public class PayCheck {
 
             System.out.printf("Hey %s, your gross pay is $%.2f.", name, grossPay);
         }
+    }
+
+    public static String getName (Scanner scanner) {
+        System.out.print("Enter you name: "); // String queryName
+        String name = scanner.nextLine();
+        return name;
     }
 }
