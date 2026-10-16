@@ -8,6 +8,11 @@ public class PayCheck {
         // Created a new scanner
         Scanner scanner = new Scanner(System.in);
 
+        String employeeName = getName(scanner);
+        float hours = getHours(scanner);
+        float payRate = getPayRate(scanner);
+
+        displayGrossPay(employeeName, hours, payRate);
     }
 
     public static String getName (Scanner scanner) {
@@ -16,19 +21,19 @@ public class PayCheck {
         return name;
     }
 
-    public static double getHours (Scanner scanner) {
-        System.out.print("Number of hours worked: "); // double queryHours
+    public static float getHours (Scanner scanner) {
+        System.out.print("Number of hours worked: ");
         float hours = scanner.nextFloat();
         return hours;
     }
 
-    public static double getPayRate (Scanner scanner) {
+    public static float getPayRate (Scanner scanner) {
         System.out.print("Pay rate: "); //double getPayRate
         float payRate = scanner.nextFloat();
         return payRate;
     }
 
-    public static void displayGrossPay(String name, double hoursWorked, double payRate) {
+    public static void displayGrossPay(String name, float hoursWorked, float payRate) {
         double grossPay = hoursWorked * payRate; //void grossPay
 
         if (hoursWorked > 40) {
@@ -37,10 +42,9 @@ public class PayCheck {
             double extraPay = 1.5 * overtime;
             double grossPayExtra = grossPay + extraPay;
 
-            System.out.printf("Hey %s, your gross pay after overtime is $%.2f", name, grossPayExtra);
+            System.out.printf("Hey %s, your gross pay with overtime is $%.2f", name, grossPayExtra);
 
         } else {
-
             System.out.printf("Hey %s, your gross pay is $%.2f.", name, grossPay);
         }
     }
