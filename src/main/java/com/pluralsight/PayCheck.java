@@ -2,7 +2,7 @@ package com.pluralsight;
 
 import java.util.*;
 
-public class payCheck {
+public class PayCheck {
 
     public static void main(String[] args) {
         // Created a new scanner
