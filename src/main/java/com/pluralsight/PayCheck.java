@@ -42,4 +42,16 @@ public class PayCheck {
         String name = scanner.nextLine();
         return name;
     }
+
+    public static double getHours (Scanner scanner) {
+        System.out.print("Number of hours worked: "); // double queryHours
+        float hours = scanner.nextFloat();
+        return hours;
+    }
+
+    public static double getPayRate (Scanner scanner) {
+        System.out.print("Pay rate: "); //double getPayRate
+        float payRate = scanner.nextFloat();
+        return payRate;
+    }
 }
