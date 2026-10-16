@@ -5,7 +5,6 @@ import java.util.*;
 public class PayCheck {
 
     public static void main(String[] args) {
-        // Created a new scanner
         Scanner scanner = new Scanner(System.in);
 
         String employeeName = getName(scanner);
@@ -16,7 +15,7 @@ public class PayCheck {
     }
 
     public static String getName (Scanner scanner) {
-        System.out.print("Enter you name: "); // String queryName
+        System.out.print("Enter you name: ");
         String name = scanner.nextLine();
         return name;
     }
@@ -28,16 +27,15 @@ public class PayCheck {
     }
 
     public static float getPayRate (Scanner scanner) {
-        System.out.print("Pay rate: "); //double getPayRate
+        System.out.print("Pay rate: ");
         float payRate = scanner.nextFloat();
         return payRate;
     }
 
     public static void displayGrossPay(String name, float hoursWorked, float payRate) {
-        double grossPay = hoursWorked * payRate; //void grossPay
+        double grossPay = hoursWorked * payRate;
 
         if (hoursWorked > 40) {
-            // Calculates gross pay after extra pay
             double overtime = hoursWorked - 40;
             double extraPay = 1.5 * overtime;
             double grossPayExtra = grossPay + extraPay;
